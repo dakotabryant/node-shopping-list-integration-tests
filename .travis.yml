@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: stbp+LmPRM6tScJmjkmln/D5p9/HKI0V9RWA7VupEyQttykDaixp+Gvb5g2mumqGFRJYR4eFJ1iDRuUFnbuSrcXbwxSCWUv2KpuW/escjqChNkEcVqb4M4DJTMN9YLTarPZ/PYOq9QcsnOkz5ySHINACDj1Pv3n3QMR5ZIt++Z2AFvUbu3/IivdLxVhSIGcQwJvdTZapdcHhw2NPoaK0zkyS3IiC0FOmC1Y0NfLcrPFyuJgGeMSW3GSXD870K7UVrKJ5cEEeNHfThKzcghohUCF/L2SfrFK7/iFSvJ8ilNnsF8bYuk5hIaQgSs0MH1Ks6n4C/U/HaXBBXrxdTGhNucCJRv0Pj+GE/6FB7hGZ0PfKe4Cgwcl3Bnxe+FXPa8jc5/oknCtvLn1lYju5AkY9VE6smwIJ7MzvsEdne+sf+7Ln8NqKeFJWcE5sKyC9klpAu6zOaQszCFLQ4K+Jz0hTyk8WPrTBwNtAHp+D1jjhxcZM9n+Q4o9tuvLI/t15wIscd+Xn/MMoe5iwnM+m81melB1oj4tQ2ARb4B6WRvIG/IaGAkdgbUR3gCsVPwX5a0bndmepk9RxhPN+RUiSZ+vKNaxjbIS//oJ3yzNgfFDWlvg67EayXXRSDYCMoUFdufnuyG7HSAjjc2Jmky2lfXWXsYQdUjjCjW0Q6Ddt2kfCE+o=
+  app: node-shopping-list-integration-tests
+  on:
+    repo: dakotabryant/node-shopping-list-integration-tests
