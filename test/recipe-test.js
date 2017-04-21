@@ -55,11 +55,11 @@ describe('Recipe', function() {
       ingredients: ['ingredient 1', 'ingredient 2']
     };
     return chai.request(app)
-      .get('/shopping-list')
+      .get('/recipes')
       .then(function(res) {
         updateData.id = res.body[0].id;
         return chai.request(app)
-          .put(`/shopping-list/${updateData.id}`)
+          .put(`/recipes/${updateData.id}`)
           .send(updateData);
       })
       .then(function(res) {
@@ -78,10 +78,10 @@ describe('Recipe', function() {
     return chai.request(app)
       // first have to get so we have an `id` of item
       // to delete
-      .get('/shopping-list')
+      .get('/recipes')
       .then(function(res) {
         return chai.request(app)
-          .delete(`/shopping-list/${res.body[0].id}`);
+          .delete(`/recipes/${res.body[0].id}`);
       })
       .then(function(res) {
         res.should.have.status(204);
